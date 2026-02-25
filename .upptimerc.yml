@@ -1,36 +1,114 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+owner: isanchezv07
+repo: status-page
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
-  - name: IPv6 test
-    url: forwardemail.net
-    port: 80
-    check: "tcp-ping"
-    ipv6: true
+  - name: Brain-Box App
+    url: https://brain-box-ftc.vercel.app
+    check-interval: 5
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status-brain-box-ftc.vercel.app
+  name: Brain Box Status
+  introTitle: "Estado de los servicios de **Brain Box**"
+  introMessage: "Monitoreo en tiempo real. Si ves un incidente, nuestro equipo técnico ya está trabajando en la resolución."
+  # Logo invisible para controlarlo por CSS (estándar Upptime)
+  logoUrl: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+  
   navbar:
-    - title: Status
+    - title: Estado
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: Plataforma
+      href: https://brain-box-ftc.vercel.app
+    - title: Soporte
+      href: https://github.com/isanchezv07/status-page/issues
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+  theme: dark
+  customCSS: |
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+    /* Variables de tema profundo y tecnológico */
+    :root {
+      --body-background-color: #050505 !important;
+      --card-background-color: #0a0a0a !important;
+      --nav-background-color: #050505 !important;
+      --body-text-color: #e2e8f0 !important;
+      --secondary-text-color: #94a3b8 !important;
+      --nav-border-bottom-color: #1e293b !important;
+      --card-border-color: #1e293b !important;
+    }
+
+    /* Aplicación de estilos globales */
+    html, body {
+      background-color: var(--body-background-color) !important;
+      font-family: 'Space Grotesk', sans-serif !important;
+    }
+
+    /* Enlaces con un tono azul eléctrico / tecnológico */
+    a {
+      color: #3b82f6 !important;
+      text-decoration: none !important;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      color: #60a5fa !important;
+    }
+
+    /* Estilo de tarjetas: minimalistas, oscuras y con bordes afilados */
+    .card {
+      border: 1px solid var(--card-border-color) !important;
+      border-radius: 4px !important; /* Bordes más rectos para look tech */
+      background-color: var(--card-background-color) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+      transition: border-color 0.2s ease;
+    }
+    .card:hover {
+      border-color: #3b82f6 !important; /* Brillo azul al pasar el mouse */
+    }
+
+    /* Tipografía de Títulos */
+    h1, h2, h3 { 
+      font-weight: 700 !important; 
+      letter-spacing: -0.02em !important; 
+      text-transform: uppercase;
+    }
+
+    /* Tiempos y números en fuente monoespaciada para aspecto de terminal */
+    .uptime, .time, code {
+      font-family: 'JetBrains Mono', monospace !important;
+    }
+
+    /* Botones de intervalo de tiempo (estilo consola) */
+    input[type="radio"] + label {
+      background: #0a0a0a !important;
+      border: 1px solid #1e293b !important;
+      color: #94a3b8 !important;
+      font-family: 'JetBrains Mono', monospace !important;
+      font-size: 0.85rem !important;
+      border-radius: 2px !important;
+      text-transform: uppercase;
+    }
+    input[type="radio"]:checked + label {
+      background: #e2e8f0 !important;
+      color: #050505 !important;
+      border-color: #e2e8f0 !important;
+    }
+
+    /* Gráficos y contenedores */
+    .graph-container {
+      border: 1px solid var(--card-border-color) !important;
+      border-radius: 4px !important;
+      background-color: #0a0a0a !important;
+    }
+
+# Configuración de gráficas (oficial)
+graphs:
+  enabled: true
+  color: "#3b82f6" # Azul tech para que coincida con el CSS
+
+# Internacionalización (i18n) corregida
+i18n:
+  activeIncidents: "Incidentes en curso"
+  allSystemsOperational: "Sistemas operativos"
+  incidentReport: "Detalle del incidente"
+  pastIncidents: "Historial"
+  overallUptime: "Disponibilidad: $1"

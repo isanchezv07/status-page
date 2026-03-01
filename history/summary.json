@@ -5,16 +5,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/brain-box-ftc.vercel.app.ico",
     "slug": "brain-box-app",
     "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "uptime": "99.25%",
+    "uptimeDay": "96.49%",
+    "uptimeWeek": "99.25%",
+    "uptimeMonth": "99.25%",
+    "uptimeYear": "99.25%",
     "time": 526,
     "timeDay": 188,
     "timeWeek": 526,
     "timeMonth": 526,
     "timeYear": 526,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-03-01": 51
+    }
   }
 ]

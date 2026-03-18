@@ -26,11 +26,3 @@ status-website:
 graphs:
   enabled: true
   color: "#3b82f6" # Azul tech para que coincida con el CSS
-
-# Internacionalización (i18n) corregida
-i18n:
-  activeIncidents: "Incidentes en curso"
-  allSystemsOperational: "Sistemas operativos"
-  incidentReport: "Detalle del incidente"
-  pastIncidents: "Historial"
-  overallUptime: "Disponibilidad: $1"
